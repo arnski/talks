@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Abseits von PHP - Node.js</title>
+
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="author" content="Hakim El Hattab">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="css/reveal.min.css">
+	<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+	document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+	</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>
+						<br>
+					</h1>
+					<h1>Abseits von PHP</h1>
+
+				</section>
+				<section data-markdown>
+					##Überblick (=> Poster? + Schiebepunkt)
+
+					###Intro
+					###Kontext
+					###...
+
+				</section>
+				<section>
+					<section>
+						<h2>
+							<img src="img/nodejs-logo.png">
+						</h2>
+					</section>
+					<section>
+						<h2>
+							<font face="helvetica">
+								<b>Warum?</b>
+							</font>
+						</h2>
+					</section>
+					<section>
+						<div>
+							<img src="https://linksunten.indymedia.org/en/system/files/images/9800991374.png">
+						</div>
+						It's HOT!
+					</section>
+					<section>
+						<div>
+							<img src="http://www.brucebucks.com/wp-content/uploads/2013/01/hipsters11.jpg" height="80%">
+						</div>
+						Hipster Hacker
+					</section>
+					<section>
+						<img src="http://i.qkme.me/3qygdc.jpg">
+						<br>
+						Brogrammer    
+
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>JavaScript Eckpunkte (90ies)</h2>
+						<img src="img/Brendan_Eich.jpg">
+						<ul>
+							<li class="fragment">1995: Brendan Eich entwickelt JS - in 10 Tagen</li>
+							<li class="fragment">1996: Netscape Navigator 3 - JavaScript 1.1</li>
+							<li class="fragment">1996: Internet Explorer 3 - JScript <= Beginn des Browserkrieges</li>
+							<li class="fragment">1996: Mit Netscape "Livewire" erster Versuch JS => Server</li>
+							<li class="fragment">1999: Huch! MS erfindet XMLHTTPObject. AJAX, Baby</li>		
+						</ul>
+
+						<aside class="notes">
+							Zu <b>Brendan entw JS</b>: Laut eigener Aussage (Engine). N.B. Brendan Eich ist Mitbegründer und aktueller CTO von Mozilla.
+
+							Zu <b>IE3 / JScript</b>: Wir erinnern uns: Microsoft hat hier eine eigene Implementation hingelegt, die natürlich nicht komplett deckungsgleich mit JavaScript war.
+						</aside>
+					</section>
+					<section>
+						<h2>JavaScript Eckpunkte (00er)</h2>
+						<ul>
+							<li class="fragment">2000: Douglas "The Crock" Crockford entdeckt *JSON* als Objektaustausch</li>
+							<li class="fragment">2004: Gmail als SPA</li>
+							<li class="fragment">2005: jQuery</li>
+							<li class="fragment">2005: Adobe CS2 - skriptbar via JS</li>
+							<li class="fragment">2006: CouchDB bringt JS in die DB- Welt</li>
+							<li class="fragment">2008: Google Chrome & V8 - ungeahnte Performance => Engine Wars</li>
+							<li class="fragment">2009: Ryan Dahl entwickelt Node.js</li>
+						</ul>
+
+						<aside class="notes">
+							Zu <b>jQuery</b>: Hat es den bis dato verwirrten Frontend- Devs möglich gemacht, mit dem DOM umzugehen. Und damit Javascript attraktiv. Javascript ist u.a. durch jQuery extrem populär geworden.
+
+							Zu <b>V8:</b> Google kommt mir v8 heraus. Sie sehen es als einen Weg, den das Web / den Browsermarkt (denken wir auch an Gmail) zu dominieren. Auf einmal stehen die anderen JS- Engine Hersteller unter Zugzwang auch zu optimieren. Und schwups - quasi über Nacht - ist JS schneller als Ruby und Python. 
+
+							V8 steigerte die Leistung, indem u.a. der JavaScript-Code bei der Ausführung zunächst in nativen Maschinencode übersetzt wird (Just-in-time-Kompilierung), anstatt Bytecode auszuführen oder die Skriptsprache direkt zu interpretieren.
+						</aside>
+					</section>
+					<section>
+						<h2>JavaScript Eckpunkte (10er)</h2>
+						<ul>
+							<li class="fragment">2011: Node.js nun auch auf Windows ;)</li>
+						</ul>
+
+						<aside class="notes">
+							Zu <b>Node auf Win</b>: Das lässt mich zum einen etwas schmunzeln, zum anderen bedeutet es: "Big Player" unterstützen Node. Und - Nach Unix und Mac ist Node nun "überall".
+						</aside>
+					</section>
+					<section>
+						<h2>JavaSript Eckpunkte (Zusammenfassung)</h2>
+						<ul>
+							<li class="fragment">Javascript ist überall. Browser, Server, DB, TVs, Mobile Apps, Photoshop, ...</li>
+							<li class="fragment">Der Pool von Entwicklern ist riesig, und wächst, und wächst, ...</li>
+							<li class="fragment">Big Players - Apple, Google, Microsoft, ... pumpen Geld in das JS- Ökosystem</li>
+							<li class="fragment">Der gedankliche "Quickie" v. Brendan Eich wird zur vermutl. am meisten verwandten Programmiersprache der Welt.</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Wo kommt Node ins Spiel?</h2>
+						<ul>
+							<li class="fragment">Rewind: 2005-2008</li>
+							<li class="fragment">Rails & Fullstackframeworks</li>
+							<li class="fragment">Performance- Schwierigkeiten</li>
+							<li class="fragment">Lösungsansatz: Merb (sf2?!)</li>
+							<li class="fragment">"No Code is faster than no code" :D</li>
+							<li class="fragment">Ryan Dahl - Ruby is at fault</li>
+						</ul>
+
+						<aside class="notes">
+							Spulen wir nochmal ein wenig zurück:
+							Erinnern wir uns an die Jahre 2005-2008. Rails explodierte. Und mit Rails auch die Full- Stack Frameworks der anderen Scriptsprachen. 
+							Ein viel diskutiertes Problem dieser Zeit war die Performance der Frameworks, insbesondere Rails.
+
+							<!-- Das Problem war nicht, das es nicht skaliert - ich meine, man konnte Twitter damit betreiben. Das Problem ist, wie schnell kann man eine wirklich dynamische Seite ausliefern. -->	
+
+							Es gab einige Versuche, Rails schneller zu machen - u.A. Merb (Ein bisschen wie sf2 - Coole Tagline "No Code is faster than no code"). Merb hat quasi eine Reinraumversion des Rails Controllers genommen, und alles weitere in Module ausgelagert, die bei Bedarf hinzugenommen wurden. Merb behob unter anderem das "Request-Lock" von Rails: Bis die Response raus war, nichts anderes machen.
+
+							<!-- Mongrel erwähnen und den damit verbundenen Shift vertiefen -->
+
+							Nach all den Mühen ist man jedoch schliesslich an den Punkt gekommen, an dem man gemerkt hat, dass das Problem an ganz anderer Stelle lag. Nicht Rails - sondern Ruby selbst hat das Performanceproblem.
+
+							Es hatte, ähnlich wie Python ein eher beschränktes Threading Modell, Interpreter Locks, etc.. 
+
+							Ich möchte mich hier nicht im Detail verlieren, unterm Strich steht jedoch, dass damals die Parallelisierung von Aufgaben wie z.B. Requestabarbeitung sehr schlecht funktionierte.
+
+							<!-- Hier evtl vertiefen - Rubys / Pythons schlechtes Threading, Interpreter Locks, etc. -->
+
+							<!-- Jetzt kam hier noch die Geschichte mit den Upload Progress Bars - Ajax : Auch hier war offenbar Mongrel der erste Technoweenie Plugin (Flickr)-->
+
+							Er experimentierte nun zunächst mit 
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section>
+						<img src="img/nodejs-logo.png" height="100">
+						<br />
+						<font face="Georgia" color="#669900">Node's goal is to provide an easy way to build scalable network programs.</font>
+						<ul>
+							<li class="fragment">Node ist eine Schicht zwischen</li>
+						</ul>
+
+						<aside class="notes">
+							Was ist das eigentlich?
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Ausblick</h2>
+						<ul>
+							<li class="fragment">Wir sehen uns wieder, wenn es heisst..</li>
+							<li class="fragment">If it's not MongoDB, it's the WrongoDB</li>
+						</ul>
+					</section>
+				</section>
+			</div>
+
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+				{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+				{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+					]
+				});
+
+</script>
+
+</body>
+</html>
