@@ -1,4 +1,4 @@
-/* Hands On 3 - Static File Webserver, Blocking vs. Non-Blocking */
+/* Hands On 3 - Static Single- File Webserver, Blocking vs. Non-Blocking */
 
 var http           = require('http');
 var fs       	     = require('fs');

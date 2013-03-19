@@ -42,15 +42,7 @@
 					</h1>
 					<h1>Abseits von PHP</h1>
 
-				</section>
-				<section data-markdown>
-					##Überblick (=> Poster? + Schiebepunkt)
-
-					###Intro
-					###Kontext
-					###...
-
-				</section>
+				</section>				
 				<section>
 					<section>
 						<h2>
@@ -72,12 +64,12 @@
 					</section>
 					<section>
 						<div>
-							<img src="http://www.brucebucks.com/wp-content/uploads/2013/01/hipsters11.jpg" height="80%">
+							<img src="img/hipsters11.jpg" height="500px">
 						</div>
 						Hipster Hacker
 					</section>
 					<section>
-						<img src="http://i.qkme.me/3qygdc.jpg">
+						<img src="img/brogrammer_purcell.jpg">
 						<br>
 						Brogrammer    
 
@@ -96,7 +88,7 @@
 						</ul>
 
 						<aside class="notes">
-							Zu <b>Brendan entw JS</b>: Laut eigener Aussage (Engine). N.B. Brendan Eich ist Mitbegründer und aktueller CTO von Mozilla.
+							Zu <b>Brendan entwickelt JS - in 10 Tagen</b>: Laut eigener Aussage (Engine). N.B. Brendan Eich ist Mitbegründer und aktueller CTO von Mozilla.
 
 							Zu <b>IE3 / JScript</b>: Wir erinnern uns: Microsoft hat hier eine eigene Implementation hingelegt, die natürlich nicht komplett deckungsgleich mit JavaScript war.
 						</aside>
@@ -132,7 +124,7 @@
 						</aside>
 					</section>
 					<section>
-						<h2>JavaSript Eckpunkte (Zusammenfassung)</h2>
+						<h2>JavaScript Eckpunkte (Zusammenfassung)</h2>
 						<ul>
 							<li class="fragment">Javascript ist überall. Browser, Server, DB, TVs, Mobile Apps, Photoshop, ...</li>
 							<li class="fragment">Der Pool von Entwicklern ist riesig, und wächst, und wächst, ...</li>
@@ -144,12 +136,18 @@
 				<section>
 					<section>
 						<h2>Wo kommt Node ins Spiel?</h2>
+						<img src="img/ryan_dahl.jpg">
+						<ul><li class="fragment">2009: Ryan Dahl entwickelt Node.js</li></ul>
+						
+					</section>
+					<section>
+						<h2>Rewind: 2005-2008</h2>
+
 						<ul>
-							<li class="fragment">Rewind: 2005-2008</li>
 							<li class="fragment">Rails & Fullstackframeworks</li>
 							<li class="fragment">Performance- Schwierigkeiten</li>
 							<li class="fragment">Lösungsansatz: Merb (sf2?!)</li>
-							<li class="fragment">"No Code is faster than no code" :D</li>
+							<li class="fragment"> * "No Code is faster than no code" :D</li>
 							<li class="fragment">Ryan Dahl - Ruby is at fault</li>
 						</ul>
 
@@ -157,6 +155,8 @@
 							Spulen wir nochmal ein wenig zurück:
 							Erinnern wir uns an die Jahre 2005-2008. Rails explodierte. Und mit Rails auch die Full- Stack Frameworks der anderen Scriptsprachen. 
 							Ein viel diskutiertes Problem dieser Zeit war die Performance der Frameworks, insbesondere Rails.
+
+							Skalierbarkeit != Performance
 
 							<!-- Das Problem war nicht, das es nicht skaliert - ich meine, man konnte Twitter damit betreiben. Das Problem ist, wie schnell kann man eine wirklich dynamische Seite ausliefern. -->	
 
@@ -174,22 +174,88 @@
 
 							<!-- Jetzt kam hier noch die Geschichte mit den Upload Progress Bars - Ajax : Auch hier war offenbar Mongrel der erste Technoweenie Plugin (Flickr)-->
 
-							Er experimentierte nun zunächst mit 
+							Er experimentierte nun zunächst mit ... <!-- ToDo: ergaenzen -->
+
+							So. Das war jetzt eine ganze Menge Kontext. Doch ...
 						</aside>
 					</section>
 				</section>
 				<section>
 					<section>
-						<img src="img/nodejs-logo.png" height="100">
+						<h2>Was ist eigentlich Node.js?</h2>
+					</section>
+					<section>
+						<img src="img/nodejs-logo.png" height="300">
 						<br />
-						<font face="Georgia" color="#669900">Node's goal is to provide an easy way to build scalable network programs.</font>
-						<ul>
-							<li class="fragment">Node ist eine Schicht zwischen</li>
-						</ul>
+						<p style="font-family: 'Georgia';color: #669900">Node's goal is to provide an easy way to build scalable network programs.</font>
 
 						<aside class="notes">
-							Was ist das eigentlich?
+							Was das eigentlich bedeutet, schauen wir uns jetzt an.
 						</aside>
+					</section>
+					<section>
+						<h2>Node erweitert v8 um ...</h2>
+						<img src="img/nodejsarch.png" height="300">
+						<!-- ToDo: Durch eigenes ersetzen -->
+					</section>
+					<section>
+						Was heisst das eigentlich ? 
+						=> Serverside JS, Dicker!
+					</section>
+					<section>
+						<h2>Good Idea</h2>
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<h2>Not Neccessarily Good Idea</h2>
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Basic Examples</h2>
+						<aside class="notes">
+							Diese Examples bedienen sich der Standardfunktionalitäten von Node.
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>NPM - Node Package Manager</h2>
+						<aside class="notes">
+							NPM Registry.
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Intermediate Examples</h2>
+						<aside class="notes">
+							Diese Examples bedienen sich weiterer Module aus der NPM Registry.
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Awesome Examples</h2>
+						<aside class="notes">
+							Diese Examples sind awesome.
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Rekapitulation</h2>
+						<ul>
+							<li>WDH 1</li>
+							<li>WDH 2</li>
+						</ul>
 					</section>
 				</section>
 				<section>

@@ -1,1 +1,1 @@
-/* Hands On 5 - Streams */
+/* Hands On 5 - Streams, Pipes */
