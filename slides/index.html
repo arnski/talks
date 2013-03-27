@@ -143,51 +143,109 @@
 				</section>
 				<section>
 					<section>
-						<h2>Wo kommt Node ins Spiel?</h2>
-						<img src="img/ryan_dahl.jpg">
-						<ul><li class="fragment">2009: Ryan Dahl entwickelt Node.js</li></ul>
-						
-					</section>
-					<section>
-						<h2>Rewind: 2005-2008</h2>
-
-						<ul>
-							<li class="fragment">Rails & Fullstackframeworks</li>
-							<li class="fragment">Performance- Schwierigkeiten</li>
-							<li class="fragment">Lösungsansatz: Merb (sf2?!)</li>
-							<li class="fragment"> * "No Code is faster than no code" :D</li>
-							<li class="fragment">Ryan Dahl - Ruby is at fault</li>
-						</ul>
-
+					  <h1>Rewind: 2005-2008</h1>
 						<aside class="notes">
-							Spulen wir nochmal ein wenig zurück:
-							Erinnern wir uns an die Jahre 2005-2008. Rails explodierte. Und mit Rails auch die Full- Stack Frameworks der anderen Scriptsprachen. 
-							Ein viel diskutiertes Problem dieser Zeit war die Performance der Frameworks, insbesondere Rails.
+						  Wo kommt Node ins Spiel? Spulen wir nochmal ein wenig zurück:
+						  
+						  Erinnern wir uns an die Jahre 2005-2008. Rails explodierte. Und mit Rails auch die Full- Stack Frameworks der anderen Scriptsprachen. 
+              	
+  						Ein viel diskutiertes Problem dieser Zeit war die Performance der Frameworks, insbesondere Rails.
 
-							Skalierbarkeit != Performance
+  							Skalierbarkeit != Performance
 
-							<!-- Das Problem war nicht, das es nicht skaliert - ich meine, man konnte Twitter damit betreiben. Das Problem ist, wie schnell kann man eine wirklich dynamische Seite ausliefern. -->	
+  							<!-- Das Problem war nicht, das es nicht skaliert - ich meine, man konnte Twitter damit betreiben. Das Problem ist, wie schnell kann man eine wirklich dynamische Seite ausliefern. -->	
 
-							Es gab einige Versuche, Rails schneller zu machen - u.A. Merb (Ein bisschen wie sf2 - Coole Tagline "No Code is faster than no code"). Merb hat quasi eine Reinraumversion des Rails Controllers genommen, und alles weitere in Module ausgelagert, die bei Bedarf hinzugenommen wurden. Merb behob unter anderem das "Request-Lock" von Rails: Bis die Response raus war, nichts anderes machen.
+  							
+  							Ich möchte mich hier nicht im Detail verlieren, unterm Strich steht jedoch, dass damals die Parallelisierung von Aufgaben wie z.B. Requestabarbeitung sehr schlecht funktionierte.
 
-							<!-- Mongrel erwähnen und den damit verbundenen Shift vertiefen -->
 
-							Nach all den Mühen ist man jedoch schliesslich an den Punkt gekommen, an dem man gemerkt hat, dass das Problem an ganz anderer Stelle lag. Nicht Rails - sondern Ruby selbst hat das Performanceproblem.
 
-							Es hatte, ähnlich wie Python ein eher beschränktes Threading Modell, Interpreter Locks, etc.. 
+  							<!-- Jetzt kam hier noch die Geschichte mit den Upload Progress Bars - Ajax : Auch hier war offenbar Mongrel der erste Technoweenie Plugin (Flickr)-->
 
-							Ich möchte mich hier nicht im Detail verlieren, unterm Strich steht jedoch, dass damals die Parallelisierung von Aufgaben wie z.B. Requestabarbeitung sehr schlecht funktionierte.
+  							Er experimentierte nun zunächst mit ... <!-- ToDo: ergaenzen -->
 
-							<!-- Hier evtl vertiefen - Rubys / Pythons schlechtes Threading, Interpreter Locks, etc. -->
+  							So. Das war jetzt eine ganze Menge Kontext. Doch ...
 
-							<!-- Jetzt kam hier noch die Geschichte mit den Upload Progress Bars - Ajax : Auch hier war offenbar Mongrel der erste Technoweenie Plugin (Flickr)-->
-
-							Er experimentierte nun zunächst mit ... <!-- ToDo: ergaenzen -->
-
-							So. Das war jetzt eine ganze Menge Kontext. Doch ...
 						</aside>
 					</section>
-				</section>
+					<section>
+            <h2>Rails & Fullstackframeworks</h2>
+            <img src="img/ruby-on-rails-logo.png" height="80%">
+            <img src="img/Performanceprobleme.jpg" class="fragment">
+            <aside class="notes">
+							Performance- Schwierigkeiten
+						</aside>
+					</section>
+					<section>
+					  <h2>Mongrel & Merb</h2>
+					  <img src="img/Mongrel_2_logo.png" width="400px"><br>
+					  <i>"No Code is faster than no code"</i>
+					  <aside class="notes">
+              Lösungsansätze: Mongrel & Merb
+              
+              Es gab einige Versuche, Rails schneller zu machen - u.A. Merb (Ein bisschen wie sf2 - Coole Tagline "No Code is faster than no code"). Merb hat quasi eine Reinraumversion des Rails Controllers genommen, und alles weitere in Module ausgelagert, die bei Bedarf hinzugenommen wurden. Merb behob unter anderem das "Request-Lock" von Rails: Bis die Response raus war, nichts anderes machen.
+						</aside>
+					</section>
+					<section>
+					  <h2>Mongrel</h2>
+					  <img src="img/mongrel_request_response.jpg">
+					  <aside class="notes">
+					    * Shift des Verständnisses vom Webserver
+					    ** Weg vom Ordner mit Skripten und Statics
+					    ** Hin zu Konzept von Request & Response in Sprache selbst.
+              * Mongrel = Bastard / Schäferhundmischling			   
+				    </aside>
+					</section>
+					<section>
+					  <h2>Merb</h2>
+					  <img src="img/reinraum2.jpg" height="80%">
+					  <aside class="notes">
+					    * Reinraumversion von Rails Controller - mit Modularem Konzept für restliche Klassen
+              * Merb wurde später (2010, Rails 3.0) mit Rails zusammengeführt
+              * (sf2?!) ;)
+				    </aside>
+					</section>
+					<section>
+              <h1><i>"Ruby is at fault"</i></h1><br/>
+              <img src="img/ruby.png" height="20%">
+              <aside class="notes">
+                Nach all den Mühen ist man jedoch schliesslich an den Punkt gekommen, an dem man gemerkt hat, dass das Problem an ganz anderer Stelle lag. Nicht Rails - sondern Ruby selbst hat das Performanceproblem.  
+
+  							Es hatte, ähnlich wie Python ein eher beschränktes Threading Modell, Interpreter Locks, etc..                         
+
+  							<!-- Hier evtl vertiefen - Rubys / Pythons schlechtes Threading, Interpreter Locks, etc. -->  				
+
+              </aside>
+  				</section>
+					<section>
+					  <img src="img/ryan_dahl.jpg"><br/>
+					  <i>Ryan Dahl</i>
+					</section>										
+          <section>
+            <img src="img/hmm_big.jpg" alt="description">
+          </section>
+          <section>
+            <img src="img/Polydactyly_01_Lfoot_AP.jpg" alt="description">
+            <aside class="notes">
+              Zeh ++
+            </aside>
+          </section>
+          <section>
+					  <img src="img/lonely.jpg"><br/>
+					</section>
+					<section>
+					  <img src="img/v8_logo.png"><br/>
+					</section>
+					<section>
+					  <h1>BAM! Javascript!</h1>
+					  <aside class="notes">
+					    Vorher erwähnen: Es war schon die Idee mit dem Non-Blocking.
+					    
+					    Features: Anonymous Functions, Closures, aber insbesondere hat es niemand serverseitig genutzt. Es gab also keine Vorprägung in den Köpfen wie man JS benutzen soll..
+					  </aside>
+					</section>
+				</section>				
+			</section>
 				<section>
 					<section>
 						<h2>Was ist eigentlich Node.js?</h2>
