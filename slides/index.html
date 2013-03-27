@@ -75,9 +75,24 @@
 					<section>
 						<img src="img/brogrammer_purcell.jpg">
 						<br>
-						Brogrammer    
-
+						Brogrammer 
 					</section>
+					<section>
+					  <img src="img/frameworks_irc.jpg">
+					</section>
+					<section>
+					  <img src="img/github_top_languages.jpg">
+					  <aside class="notes">Auch bei den Top Repositories ist Node weit vor Symfony</aside>
+					</section>
+					<section>
+					  <img src="img/npm_stats.jpg">
+					</section>
+					<section>
+					  <img src="img/packagist_stats.jpg">
+					</section>
+				</section>
+				<section>
+				  TOC
 				</section>
 				<section>
 					<section>
@@ -133,7 +148,7 @@
 							<li>Javascript ist überall. Browser, Server, DB, TVs, Mobile Apps, Photoshop, ...</li>
 							<li>Der Pool von Entwicklern ist riesig, und wächst, und wächst, ...</li>
 							<li>Big Players - Google, Microsoft, Apple, Adobe, ... pumpen Geld in das JS- Ökosystem</li>
-							<li>Der gedankliche "Quickie" v. Brendan Eich wird zur vermutl. am meisten verwandten Programmiersprache der Welt.</li>
+							<li>Der gedankliche "Quickie" v. Brendan Eich wird zur vermutl. am meisten verwandten Programmiersprache der Web-Welt.</li>
 						</ul>
 					</section>
           <aside class="notes">
@@ -248,7 +263,9 @@
 			</section>
 				<section>
 					<section>
-						<h2>Was ist eigentlich Node.js?</h2>
+						<h1>Wat issen</h1><br />
+						<h1 class="fragment">eigentlich</h1><br />
+						<h1 class="fragment">Node.js?</h1>
 					</section>
 					<section>
 						<img src="img/nodejs-logo.png" height="300">
@@ -260,34 +277,36 @@
 						</aside>
 					</section>
 					<section>
-						<h2>Node erweitert v8 um ...</h2>
+						<h2>Architektur</h2>
 						<img src="img/nodejsarch.png" height="300">
-						<!-- ToDo: Durch eigenes ersetzen -->
+            <aside class="notes">
+              * Node erweitert v8 um ...<br />
+              * Wir wollen uns im Folgenden näher die JS- Ebene ansehen
+            </aside>
 					</section>
 					<section>
-						Was heisst das eigentlich ? 
-						=> Serverside JS, Dicker!
+            <img src="img/node_api.jpg">
+            <aside class="notes">
+              Was bietet uns Node?<br />
+              * Lowlevelige Biobliotheken die v8 um Server-Belange erweitern.<br />
+              * Denkkonzept - Non Blocking IO => Programmierung<br />
+              * Das "abgeben" teurer Operationen an etablierte "OS-Nahe" Bibliotheken, die sehr gut in Concurrency sind.
+            </aside>
 					</section>
 					<section>
-						<h2>Good Idea</h2>
-						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>
-						<h2>Not Neccessarily Good Idea</h2>
-						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>
+						<img src="img/io-cost.png">
+						<aside class="notes"><strong>Einleitung:</strong>Warum ist das wichtig?
+					</section>
+					<section>
+            Eventloop
 					</section>
 				</section>
 				<section>
 					<section>
 						<h2>Basic Examples</h2>
 						<aside class="notes">
-							Diese Examples bedienen sich der Standardfunktionalitäten von Node.
+							* Diese Examples bedienen sich der Standardfunktionalitäten von Node.<br/>
+							* <strong>Überleitung:</strong> Die kommenden Beispiele integrieren Bibliotheken von Drittherstellern. Bevor wir die Beispiele ansehen, machen wir einen kurzen Ausflug zu NPM - den PM von Node.
 						</aside>
 					</section>
 				</section>
@@ -295,7 +314,8 @@
 					<section>
 						<h2>NPM - Node Package Manager</h2>
 						<aside class="notes">
-							NPM Registry.
+						  * Zeigen: /slides/packages.js/Connect 2.7.3 vs express/1.x
+							* NPM Registry.
 						</aside>
 					</section>
 				</section>
@@ -316,21 +336,49 @@
 					</section>
 				</section>
 				<section>
-					<section>
+				  <section>
 						<h2>Rekapitulation</h2>
 						<ul>
-							<li>WDH 1</li>
-							<li>WDH 2</li>
+							<li>Historie</li>
+							<li>Problemstellung</li>
+							<li>Architektur, Konzepte</li>
+							<li>Node API</li>
+							<li>Basic Examples</li>
+							<li>NPM</li>
+							<li>Awesome Examples</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Fazit</h2>
+						<ul>
+						  <li>Hoffe, habe Interesse geweckt</li>
+						  <li>Schwerpunkt auf Kontext & Konzepte - Lehrsituation draussen ist 1a! Gibt viele (Video-) Tutorials. Man kommt sehr schnell rein.</li>
+							<li>Interessantes Gebiet, im Auge behalten</li>
+							<li>Code- Sharing, Templates & Models</li>
+							<li>Nicht schreiend und Arme wedelnd PHP hinter sich lassen</li>
+							<li>Site / App aus mehreren Sprachen-zusammesetzbar => Glue = Backbone / ESI ?</li>
+						</ul>
+					</section>
+				  <section>
+						<h2>Good Idea</h2>
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<h2>Not Neccessarily Good Idea</h2>
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
 						</ul>
 					</section>
 				</section>
 				<section>
 					<section>
 						<h2>Ausblick</h2>
-						<ul>
-							<li class="fragment">Wir sehen uns wieder, wenn es heisst..</li>
-							<li class="fragment">If it's not MongoDB, it's the WrongoDB</li>
-						</ul>
+						Wir sehen uns wieder, wenn es heisst..
+						<img src="img/Bonzi_Buddy_Mongo_Wrongo.png" class="fragment" height="80%">
 					</section>
 				</section>
 			</div>

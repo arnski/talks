@@ -7,7 +7,7 @@ Todo Examples:
 
 # (In einem weiteren Beispiel) erklären, dass Node schon lange Modulisierung und Packagemanagement umarmt. Node stellt Grundfunktionalitäten bereit. Request / Response, HTTP Parsing, ... Dann kommt Middleware ins Spiel. Sencha Connect ist z.B. eine Middleware, die auf Beispiel 3 aufsetzt. Connect erweitert um ... 
 # Express.js als Parallele zu Silex und Sinatra, .... Ein sehr verbreitetes Pattern (Wikipedia)
-# Als Überleitung zwischen den Basic- Examples NPM  erwähnen?
+
 # Irgendwann npm list erwähnen
 
 Todo Talk:
@@ -23,3 +23,7 @@ Todo Talk:
 # Realtime Web als Stichwort.
 # Ausblick: Soll nicht: Enterprisiges PHP ersetzen, eher Ergänzung mit Stärken. Glue = Backbone / Vielleicht ESI- Caching
 # Bonzibuddy - Wrongo
+
+Done:
+
+# Als Überleitung zwischen den Basic- Examples NPM  erwähnen?
