@@ -92,7 +92,18 @@
 					</section>
 				</section>
 				<section>
-				  TOC
+				  <h2>TOC</h2>
+				  <ul>
+				    <li style="color:green">Warum Node? ✓</li>
+				    <li>Kontext - JS</li>
+				    <li>Kontext - Ruby</li>
+				    <li>Node - Überblick</li>
+				    <li>Node - Beispiele</li>
+				    <li>NPM</li>
+				    <li>Node - Beispiele</li>
+				    <li>Fazit</li>
+				    <li>Ausblick</li>
+				  </ul>
 				</section>
 				<section>
 					<section>
@@ -282,6 +293,9 @@
             <aside class="notes">
               * Node erweitert v8 um ...<br />
               * Wir wollen uns im Folgenden näher die JS- Ebene ansehen
+              * libev (by Marc Lehmann) is an event loop similar to the well-known libevent. According to its author, libev outperforms libevent in multiple benchmarks. It is even able to emulate the libevent API.<br />
+              * libeio (by Marc Lehmann) is a fantastic idea: it relies on POSIX threads to provide an asynchronous version of the POSIX API: open, close, stat, unlink, fdatasync, mknod, etc. <br />
+              * c-ares (by Daniel Stenberg) provides an asynchronous DNS resolver.
             </aside>
 					</section>
 					<section>
@@ -330,6 +344,7 @@
 				<section>
 					<section>
 						<h2>Awesome Examples</h2>
+						* http://demo.tutorialzine.com/2012/08/nodejs-drawing-game/
 						<aside class="notes">
 							Diese Examples sind awesome.
 						</aside>
@@ -351,13 +366,16 @@
 					<section>
 						<h2>Fazit</h2>
 						<ul>
-						  <li>Hoffe, habe Interesse geweckt</li>
+						  <li>Hoffe, habe Interesse geweckt.</li>
 						  <li>Schwerpunkt auf Kontext & Konzepte - Lehrsituation draussen ist 1a! Gibt viele (Video-) Tutorials. Man kommt sehr schnell rein.</li>
 							<li>Interessantes Gebiet, im Auge behalten</li>
 							<li>Code- Sharing, Templates & Models</li>
 							<li>Nicht schreiend und Arme wedelnd PHP hinter sich lassen</li>
 							<li>Site / App aus mehreren Sprachen-zusammesetzbar => Glue = Backbone / ESI ?</li>
 						</ul>
+						<aside class="notes">
+						  <strong>Code Sharing</strong>: Vorne Templates, hinten Ganze Seiten.
+						</aside>
 					</section>
 				  <section>
 						<h2>Good Idea</h2>
@@ -368,17 +386,21 @@
 						</ul>
 						<h2>Not Neccessarily Good Idea</h2>
 						<ul>
-							<li></li>
-							<li></li>
+							<li>Number Crunching</li>
+							<li>CPU Intensive Tasks (in Node itself)</li>
 							<li></li>
 						</ul>
+						<aside class="notes">
+						  Neuer Hammer ? Nicht alles sind Nägel!
+						</aside>
 					</section>
 				</section>
 				<section>
 					<section>
 						<h2>Ausblick</h2>
 						Wir sehen uns wieder, wenn es heisst..
-						<img src="img/Bonzi_Buddy_Mongo_Wrongo.png" class="fragment" height="80%">
+						<img src="img/Bonzi_Buddy_Mongo_Wrongo.png" class="fragment" height="80%"><br />
+						<em class="fragment">(Darüber hinaus: Weitere "Abseits von PHP" Talks)</em>
 					</section>
 				</section>
 			</div>
