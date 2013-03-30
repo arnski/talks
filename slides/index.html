@@ -281,21 +281,30 @@
 					<section>
 						<img src="img/nodejs-logo.png" height="300">
 						<br />
-						<p style="font-family: 'Georgia';color: #669900">Node's goal is to provide an easy way to build scalable network programs.</font>
+						<p style="font-family: 'Georgia';color: #669900">Node's goal is to provide an easy way to build scalable network programs. <br />Node.js uses an <strong>event-driven</strong>, <strong>non-blocking</strong> <strong>I/O</strong> model that makes it lightweight and efficient, perfect for data-intensive <strong>real-time</strong> applications that run across distributed devices.</font>
 
 						<aside class="notes">
 							Was das eigentlich bedeutet, schauen wir uns jetzt an.
 						</aside>
 					</section>
 					<section>
+						<img src="img/io-cost.png">
+						<aside class="notes"><strong>Einleitung:</strong>Warum ist das wichtig?<br />
+						  * Grafik: Die größte Verschwendung aktueller Programmiertechniken...Hier idlet der CPU<br />
+						  * Man will aber viele Verbindungen gleichzeitig. Was kann man also machen:<br />
+						  a) Synchron. Alle weiteren Prozesse warten auf Fertigstellung der vorigen<br />
+						  b) Prozess forken
+						  c) Threads
+					</section>
+					<section>
 						<h2>Architektur</h2>
 						<img src="img/nodejsarch.png" height="300">
             <aside class="notes">
               * Node erweitert v8 um ...<br />
-              * Wir wollen uns im Folgenden näher die JS- Ebene ansehen
               * libev (by Marc Lehmann) is an event loop similar to the well-known libevent. According to its author, libev outperforms libevent in multiple benchmarks. It is even able to emulate the libevent API.<br />
               * libeio (by Marc Lehmann) is a fantastic idea: it relies on POSIX threads to provide an asynchronous version of the POSIX API: open, close, stat, unlink, fdatasync, mknod, etc. <br />
               * c-ares (by Daniel Stenberg) provides an asynchronous DNS resolver.
+              * Wir wollen uns im Folgenden näher die JS- Ebene ansehen
             </aside>
 					</section>
 					<section>
@@ -306,10 +315,6 @@
               * Denkkonzept - Non Blocking IO => Programmierung<br />
               * Das "abgeben" teurer Operationen an etablierte "OS-Nahe" Bibliotheken, die sehr gut in Concurrency sind.
             </aside>
-					</section>
-					<section>
-						<img src="img/io-cost.png">
-						<aside class="notes"><strong>Einleitung:</strong>Warum ist das wichtig?
 					</section>
 					<section>
             Eventloop
@@ -366,11 +371,11 @@
 					<section>
 						<h2>Fazit</h2>
 						<ul>
-						  <li>Hoffe, habe Interesse geweckt.</li>
-						  <li>Schwerpunkt auf Kontext & Konzepte - Lehrsituation draussen ist 1a! Gibt viele (Video-) Tutorials. Man kommt sehr schnell rein.</li>
-							<li>Interessantes Gebiet, im Auge behalten</li>
-							<li>Code- Sharing, Templates & Models</li>
 							<li>Nicht schreiend und Arme wedelnd PHP hinter sich lassen</li>
+						  <li>Hoffe, habe Interesse geweckt.</li>
+							<li>Interessantes Gebiet, im Auge behalten</li>
+						  <li>Schwerpunkt auf Kontext & Konzepte - Lehrsituation draussen ist 1a! Gibt viele (Video-) Tutorials. Man kommt sehr schnell rein.</li>
+							<li>Code- Sharing, Templates & Models</li>
 							<li>Site / App aus mehreren Sprachen-zusammesetzbar => Glue = Backbone / ESI ?</li>
 						</ul>
 						<aside class="notes">
