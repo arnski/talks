@@ -1,0 +1,17 @@
+{
+  "name": "git-techtalk",
+  "version": "0.0.1",
+  "description": "Git Techtalk 24.04.2014 @ G+J",  
+  "author": {
+    "name": "Arne Krüger- Wauschkuhn",
+    "email": "krueger-wauschkuhn.arne@guj.de",
+    "web": "http://arnski.de"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/arnski/talks.git"
+  },  
+  "dependencies": {
+    "reveal.js": "~2.6.2"
+  }
+}
