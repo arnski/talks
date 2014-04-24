@@ -79,18 +79,22 @@
 						</aside>
 					</section>
 					<section>
-						<h2>Auffrischung - Git</h2>			
+					  <br /><br />
+					  <h2>Auffrischung</h2>
+					</section>
+					<section>
+						<h2>Git = DVCS</h2>			
 						<table><tr><td><img src="images/distributed-not.png"></td><td><img src="images/distributed.png"></td></tr></table>						
 					</section>
 					<section>
-						<h2>Auffrischung - Git</h2>			
+						<h2>Git = DVCS</h2>			
 						<table><tr><td><img src="images/distributed-not-2.png"></td><td><img src="images/distributed-2.png"></td></tr></table>
 						<aside class="notes">
 							Hier wichtig: Anzahl Working Copies (Work Trees) gleich, jedoch mehr Repositories.. Das ergibt auch einen etwas veränderten Arbeitsfluß => next slide.
 						</aside>
 					</section>
 					<section>
-						<h2>Auffrischung - Git</h2>			
+						<h2>Git = DVCS</h2>			
 						<img src="images/distributed-3.gif">
 						<aside class="notes">
 							* Interaktion zw. lokalem Work Tree und lokalem Repo.
@@ -99,12 +103,61 @@
 						</aside>
 					</section>
 					<section>
-						<h2>Auffrischung - Git</h2>			
+						<h2>Fokus: lokale Ops</h2>			
 						<img src="images/distributed-4.png">
 						<aside class="notes">
 							Konzentration auf Interaktion zw. Work- Tree und lokalem Repo.
 						</aside>
 					</section>
+					<section>
+					  <h2>LOP: Staging</h2>
+					  <img src="images/git-local-operations.png"></img>
+					</section>
+					<section>
+					  <h2>LOP: Staging</h2>
+					  <img src="images/git-interactive-add.png"></img>
+					  <aside class="notes">
+  					  Welchen Befehl benutzt man zum Stagen? ADD. Interactive: -p
+  					</aside>
+					</section>
+					<section>
+					  <h2>LOP: Sta*sh*ing</h2>
+					  <br /><br />
+					  <table width="100%">
+        			<tr>
+        				<td style="text-align:center"><img src="images/amazon.png"></img></td>
+					      <td>
+					        <ul>
+        					  <li>$ git stash</li>
+                    <li>$ git stash pop</li>
+                    <li>$ git stash list</li>
+                    <li>$ git stash apply</li>
+                    <li>$ git stash drop</li>
+                    <li>$ git stash clear</li>
+                  </ul>
+					      </td>
+					    </tr>
+					  </table>					  
+					  <aside class="notes">
+  					  Stashes können benamt werden.
+  					</aside>
+					</section>
+					<section>
+					  <h2>LOP: Rebase</h2><br />
+					  <p>$ git rebase -i HEAD~3</p>
+					  <table width="100%">
+        			<tr>
+        				<td style="text-align:center"><img src="images/git-rebase-squash 2.png"></img></td>
+					    </tr>
+					  </table>
+					</section>	
+					<section>
+					  <h2>LOP: Rebase</h2><br />
+					  <img src="images/exclamation.gif"></img>
+					  <aside class="notes">
+  					  Nur, wenn noch nicht gepushed!
+  					</aside>
+					</section>				
 				</section>
 
         <section>
